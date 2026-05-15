@@ -4,7 +4,7 @@ const navItems = [
   { href: "#concept", label: "Concept" },
   { href: "#features", label: "Features" },
   { href: "#beauty-ai", label: "Beauty AI" },
-  { href: "#voices", label: "Voices" },
+  { href: "#download", label: "Download" },
 ];
 
 export function Header() {
