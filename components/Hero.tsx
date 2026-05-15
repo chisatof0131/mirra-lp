@@ -32,10 +32,6 @@ export function Hero() {
               App Storeでダウンロード
               <span aria-hidden className="text-[12px] transition group-hover:translate-x-0.5">→</span>
             </a>
-            <span className="flex items-center gap-2 text-[12px] uppercase tracking-[0.22em] text-ink/45">
-              <span className="block h-1.5 w-1.5 rounded-full bg-accent" />
-              now in open beta
-            </span>
           </div>
         </div>
 
