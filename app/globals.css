@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-cream: #fafaf7;
+  --color-cream-sub: #f3efe8;
+  --color-line: #e8e6e0;
+  --color-ink: #0a0a0a;
+  --color-muted: #76746e;
+  --color-accent: #ff5b5b;
+
+  --font-display: var(--font-playfair), "Times New Roman", serif;
+  --font-sans: var(--font-inter), var(--font-noto-jp), "Helvetica Neue", Arial, sans-serif;
+  --font-jp: var(--font-noto-jp), "Hiragino Sans", "Yu Gothic", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background-color: var(--color-ink);
+    color: var(--color-cream);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .marquee-track {
+    animation: marquee 60s linear infinite;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .fade-up {
+    animation: fadeUp 0.9s ease-out both;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+.prose-legal {
+  max-width: 72ch;
+}
+.prose-legal h1 {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2.75rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+.prose-legal h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  border-top: 1px solid var(--color-line);
+  padding-top: 2rem;
+}
+.prose-legal h3 {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.prose-legal p,
+.prose-legal li {
+  color: #38362f;
+  line-height: 1.85;
+  font-size: 0.95rem;
+}
+.prose-legal ul,
+.prose-legal ol {
+  padding-left: 1.5rem;
+  margin: 0.75rem 0;
+}
+.prose-legal ul li { list-style: disc; }
+.prose-legal ol li { list-style: decimal; }
+.prose-legal a { color: var(--color-ink); text-decoration: underline; text-underline-offset: 3px; }
+.prose-legal hr { border-color: var(--color-line); margin: 2rem 0; }
+.prose-legal strong { font-weight: 600; }
+.prose-legal table { border-collapse: collapse; margin: 1rem 0; width: 100%; }
+.prose-legal th, .prose-legal td { border: 1px solid var(--color-line); padding: 0.5rem 0.75rem; text-align: left; }
+.prose-legal th { background: var(--color-cream-sub); font-weight: 600; }
+.prose-legal blockquote { border-left: 2px solid var(--color-line); padding-left: 1rem; color: var(--color-muted); margin: 1rem 0; }
+.prose-legal code { background: var(--color-cream-sub); padding: 2px 6px; border-radius: 4px; font-size: 0.875em; }
