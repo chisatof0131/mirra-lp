@@ -24,7 +24,7 @@ export function Footer() {
         </nav>
       </div>
       <div className="mx-auto mt-6 flex max-w-[1400px] flex-col items-start gap-2 px-6 text-[11px] text-ink/45 md:flex-row md:items-center md:justify-between md:px-14">
-        <span>© {new Date().getFullYear()} Mirra Mirra Inc. All rights reserved.</span>
+        <span>© 2026 appful Inc. All rights reserved.</span>
         <span>made with ♡ in Tokyo</span>
       </div>
     </footer>
