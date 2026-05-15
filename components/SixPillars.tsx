@@ -103,9 +103,15 @@ function PillarCard(p: PillarCardProps) {
     return (
       <article className={`${base} bg-cream-sub min-h-[360px]`}>
         <Header no={p.no} />
-        <div className="relative -mx-3 -mt-3 mb-2 aspect-[4/3] overflow-hidden rounded-2xl bg-cream">
+        <div className="relative mb-2 flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl bg-cream">
           {p.media && (
-            <Image src={p.media} alt={p.title} fill className="object-cover" />
+            <Image
+              src={p.media}
+              alt={p.title}
+              fill
+              className="object-contain p-3"
+              sizes="(min-width: 768px) 33vw, 100vw"
+            />
           )}
         </div>
         <h3 className="font-display text-[22px] italic text-ink">{p.title}</h3>
