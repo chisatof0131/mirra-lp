@@ -5,7 +5,7 @@ const links = [
   { href: "/privacy", label: "Privacy" },
   { href: "/terms", label: "Terms" },
   { href: "/commerce", label: "特商法" },
-  { href: "mailto:hello@mirra-mirra.app", label: "Contact" },
+  { href: "mailto:info@appful.tokyo", label: "Contact" },
 ];
 
 export function Footer() {
