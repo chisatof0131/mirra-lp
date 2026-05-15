@@ -34,10 +34,6 @@ export function DownloadCTA() {
           </a>
         </div>
 
-        <p className="mt-10 flex items-center gap-2 text-[10px] uppercase tracking-[0.32em] text-cream/45">
-          <span className="block h-1.5 w-1.5 rounded-full bg-accent" />
-          Now in open beta
-        </p>
       </div>
     </section>
   );
